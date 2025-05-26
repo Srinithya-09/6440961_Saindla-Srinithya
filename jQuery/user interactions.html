@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Interactions</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button id="colorBtn">Change Color</button>
+    <div id="colorBox" style="width: 100px; height: 100px; background-color: white;"></div>
+    <script>
+        $(document).ready(function() {
+            $("#colorBtn").click(function() {
+                $("#colorBox").css("background-color", "red");
+            });
+            $("#colorBox").dblclick(function() {
+                $(this).css("background-color", "white");
+            });
+        });
+    </script>
+</body>
+</html>
