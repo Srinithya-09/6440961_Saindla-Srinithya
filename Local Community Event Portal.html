@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Local Community Event Portal</title>
+    <style>
+    /* Header styles */
+h1 {
+    color: rgb(62, 71, 114); /* Inline style applied */
+}
+
+/* Body background */
+body {
+    background-color: #f0f0f0; /* Embedded style */
+}
+
+/* External stylesheet link */
+@import url('styles.css');
+
+/* Universal selector to reset margin/padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for all h2 elements */
+h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Style for main header */
+#mainHeader {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+}
+
+/* Style for event containers */
+.eventCard {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 15px;
+}
+
+/* Grouping selector for h3 and p */
+h3, p {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Color & Background Styling */
+body {
+    background-color: #ffffff; /* Fallback color */
+    background-image: url('background.jpg');
+}
+
+h2 {
+    background: linear-gradient(to right, #eff4e8, #fafff9);
+}
+
+/* Typography: Fonts and Text */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+p {
+    text-align: justify;
+    text-transform: none;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+}
+
+/* Link and List Styling */
+a:link {
+    color: #007BFF;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+a:active {
+    color: #004085;
+}
+
+a:visited {
+    color: #6c757d;
+}
+
+/* List styling */
+ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    background-color: #f9f9f9;
+}
+</style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+        <a href="help.html" target="_blank">Help</a>
+    </nav>
+
+    <!-- Main -->
+    <main>
+        <div id="welcomeBanner">
+            Welcome to the Local Community Event Portal! 
+            <span class="highlight">Check out our special offers!</span>
+        </div>
+
+        <section id="events">
+            <h1>Past Events</h1>
+            <table>
+                <tr>
+                    <td><img src="event1.jpg" alt="Event 1" title="Community Gathering" class="event-image"></td>
+                    <td><img src="event2.jpg" alt="Event 2" title="Charity Run" class="event-image"></td>
+                    <td><img src="event3.jpg" alt="Event 3" title="Art Exhibition" class="event-image"></td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="registration">
+            <h2>Event Registration</h2>
+            <form id="eventForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required autofocus>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                
+                <label for="eventType">Event Type:</label>
+                <select id="eventType" name="eventType" required>
+                    <option value="community">Community</option>
+                    <option value="charity">Charity</option>
+                    <option value="art">Art</option>
+                </select>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your Message"></textarea>
+                
+                <button type="submit">Register</button>
+                <output id="confirmationMessage"></output>
+            </form>
+        </section>
+
+        <section id="feedback">
+            <h2>Event Feedback</h2>
+            <textarea id="feedbackTextarea" oninput="countCharacters()"></textarea>
+            <p id="charCount">Characters: 0</p>
+        </section>
+
+        <section id="videoInvite">
+            <h2>Event Promo Video</h2>
+            <video id="promoVideo" controls oncanplay="videoReady()">
+                <source src="promo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <button id="findEvents">Find Nearby Events</button>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Local Community Event Portal</p>
+    </footer>
+
+    <script>
+        document.getElementById('eventForm').onsubmit = function(event) {
+            event.preventDefault();
+            document.getElementById('confirmationMessage').innerText = "Registration Successful!";
+        };
+
+        function countCharacters() {
+            const textarea = document.getElementById('feedbackTextarea');
+            document.getElementById('charCount').innerText = "Characters: " + textarea.value.length;
+        }
+
+        function videoReady() {
+            alert("Video ready to play");
+        }
+
+        document.getElementById('findEvents').onclick = function() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError, {enableHighAccuracy: true});
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        };
+
+        function showPosition(position) {
+            alert("Latitude: " + position.coords.latitude + 
+            "\nLongitude: " + position.coords.longitude);
+        }
+
+        function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    alert("User denied the request for Geolocation.");
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    alert("Location information is unavailable.");
+                    break;
+                case error.TIMEOUT:
+                    alert("The request to get user location timed out.");
+                    break;
+                case error.UNKNOWN_ERROR:
+                    alert("An unknown error occurred.");
+                    break;
+            }
+        }
+
+        window.onbeforeunload = function() {
+            return "You have unsaved changes. Are you sure you want to leave?";
+        };
+    </script>
+</body>
+</html>
+
