@@ -1,0 +1,144 @@
+/* Header styles */
+h1 {
+    color: red; /* Inline style applied */
+}
+
+/* Body styles */
+body {
+    background-color: #f0f0f0; /* Embedded style */
+}
+
+/* External stylesheet link */
+@import url('styles.css');
+
+/* Styles for main CTA button */
+.cta-button {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Universal selector */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Element selector */
+h2 {
+    font-size: 24px;
+}
+
+/* ID selector */
+#mainHeader {
+    background-color: #333;
+    color: white;
+}
+
+/* Class selector */
+.eventCard {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* Grouping selector */
+h3, p {
+    margin-bottom: 15px;
+}
+
+/* Color and background styling */
+body {
+    background-color: #ffffff; /* Fallback color */
+    background-image: url('background.jpg');
+}
+
+h2 {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.description {
+    text-align: justify;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+/* Link and list styling */
+a:link {
+    color: #007BFF;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+a:active {
+    color: #003f7f;
+}
+
+a:visited {
+    color: #6c757d;
+}
+
+nav ul {
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+nav li {
+    padding: 5px 0;
+}
+
+/* Table styling */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Box model and layout control */
+.eventCard {
+    border: 2px solid #ccc;
+    padding: 15px;
+    margin: 10px;
+    outline: 1px solid #000;
+}
+
+/* Multiple columns in text */
+.news-article {
+    column-count: 2;
+    column-gap: 30px;
+    column-rule: 1px solid gray;
+}
+
+/* Responsive web design */
+@media (max-width: 768px) {
+    nav ul {
+        display: block;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    body {
+        font-size: 14px;
+    }
+}
