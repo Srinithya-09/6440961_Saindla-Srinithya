@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Common Methods</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="box">📦 <strong>Box 1:</strong> This box contains an overview of jQuery methods that allow dynamic changes to page elements.</div>
+    <div class="box">📘 <strong>Box 2:</strong> jQuery simplifies tasks like hiding, showing, fading, and toggling elements with clean, readable code.</div>
+    <div class="box">💡 <strong>Box 3:</strong> These buttons demonstrate basic jQuery effects in action. Try clicking them to interact with the boxes!</div>
+    <button id="hideBtn">Hide</button>
+    <button id="showBtn">Show</button>
+    <button id="fadeOutBtn">Fade Out</button>
+    <button id="fadeInBtn">Fade In</button>
+    <button id="toggleBtn">Toggle</button>
+    <script>
+        $(document).ready(function() {
+            $("#hideBtn").click(function() {
+                $(".box").hide();
+            });
+            $("#showBtn").click(function() {
+                $(".box").show();
+            });
+            $("#fadeOutBtn").click(function() {
+                $(".box").fadeOut();
+            });
+            $("#fadeInBtn").click(function() {
+                $(".box").fadeIn();
+            });
+            $("#toggleBtn").click(function() {
+                $(".box").toggle();
+            });
+        });
+    </script>
+</body>
+</html>
