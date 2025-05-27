@@ -14,13 +14,3 @@ The **Local Community Event Portal** is a web application that helps users disco
 
 ---
 
-## 💡 Technologies Used
-
-- HTML5
-- CSS3
-- JavaScript (with optional jQuery)
-- Bootstrap (for responsive design)
-- Node.js (optional, if using server-side features)
-- ANSI SQL Using MySQL
-- C#ADO.NET
-
