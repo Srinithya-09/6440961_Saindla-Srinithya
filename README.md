@@ -1,16 +1,55 @@
-# 🌐 Local Community Event Portal
+This repository contains a collection of structured learning modules focused on front-end web development and Java backend programming. The exercises are categorized into three modules:
 
-The **Local Community Event Portal** is a web application that helps users discover, post, and manage local events. It provides a simple and interactive way for communities to stay informed and engaged with nearby happenings.
+📁 MODULE 1: HTML5, CSS3, Bootstrap 5, JavaScript
 
----
+This module covers comprehensive front-end technologies with practice files for:
 
-## 🛠️ Features
+    HTML5: Semantics, forms, media, localStorage, geolocation, and more.
+    CSS3: Styling techniques including selectors, layout models, media queries, and responsive design.
+    Bootstrap 5: Setup, grid system, forms, navbars, cards, utilities, JS plugins, and customization.
+    JavaScript: Syntax, conditionals, functions, DOM manipulation, AJAX, async operations, and jQuery.
 
-- 📝 Post and manage local community events
-- 🔍 Browse upcoming events by category or date
-- 📅 View detailed event information
-- 🧾 Register interest for events
-- 🧑‍🤝‍🧑 Designed for ease of use by residents and organizers
+Key Folders: -Module 1 - HTML5/
 
----
+    Module 1-CSS3/
+    Module 1-Bootstrap5/
+    Module 1-JavaScript/
 
+📁 MODULE 2: ANSI SQL
+
+This module includes SQL query practice scripts for database learning and backend development.
+
+File:
+
+    ansi_sql_exercises.sql — Common ANSI SQL commands and practice questions.
+
+📁 MODULE 3: Core Java
+
+This module includes practical Java programs covering core concepts such as:
+
+    Data types, operators, control structures
+    OOP principles: inheritance, interfaces, records
+    Collections, streams, lambda expressions
+    File I/O, JDBC, threading, and exception handling
+
+Key Folder:
+
+    Core_Java_Exercises/ — Includes .java files categorized by concept
+
+📦 How to Use
+
+    Clone the repo:
+
+    git clone https://github.com/Tejaswi-Ramineni9010/6440910_Ramineni-Tejaswi
+
+Open relevant folders in your preferred IDE or code editor.
+
+Use any local server (e.g., Live Server in VS Code) for HTML/CSS/JS files.
+
+Compile and run Java files using:
+
+bash Copy code javac FileName.java java FileName Use any SQL interface (like MySQL Workbench or SQLite) to test SQL scripts.
+
+🧑‍💻 Author Ramineni Tejaswi B.Tech in Artificial Intelligence and Machine Learning Passionate about full-stack development, Java, and building real-world projects.
+
+📄 License This repository is open for educational and non-commercial use.
