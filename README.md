@@ -40,7 +40,7 @@ Key Folder:
 
     Clone the repo:
 
-    git clone https://github.com/Tejaswi-Ramineni9010/6440910_Ramineni-Tejaswi
+    git clone https://github.com/Srinithya-09/6440961_Saindla-Srinithya
 
 Open relevant folders in your preferred IDE or code editor.
 
@@ -50,6 +50,6 @@ Compile and run Java files using:
 
 bash Copy code javac FileName.java java FileName Use any SQL interface (like MySQL Workbench or SQLite) to test SQL scripts.
 
-🧑‍💻 Author Ramineni Tejaswi B.Tech in Artificial Intelligence and Machine Learning Passionate about full-stack development, Java, and building real-world projects.
+🧑‍💻 Author SAINDLA SRINITHYA B.Tech in Artificial Intelligence and Machine Learning Passionate about full-stack development, Java, and building real-world projects.
 
 📄 License This repository is open for educational and non-commercial use.
